@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Header</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="nav-logo">
+                <img src="img/logo.png" alt="logo">
+                <div class="nav-name-logo">
+                    <div>ST. PIUS CONVENT SCHOOL</div>
+                    <div>LAMBA PIND, JALANDHAR, PUNJAB - 144001</div>
+                    <div>(Established, Owned, and Administered by the Diocese of Jalandhar)</div>
+                </div>
+            </div>
+            <div class="ham-menu icon">
+                <span class="line top"></span>
+                <span class="line middle"></span>
+                <span class="line bottom"></span>
+            </div>
+            <div class="nav-wrapper">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a>About <i class="fas fa-caret-down"></i></a>
+                        <ul class="drop-down">
+                            <li><a href="#">ITEM 1</a></li>
+                            <li><a href="#">ITEM 2</a></li>
+                            <li><a href="#">ITEM 3</a></li>
+                            <li><a href="#">ITEM 4</a></li>
+                        </ul>
+                    <li><a>School Rules <i class="fas fa-caret-down"></i></a>
+                        <ul class="drop-down">
+                            <li><a href="#">ITEM 1</a></li>
+                            <li><a href="#">ITEM 2</a></li>
+                            <li><a href="#">ITEM 3</a></li>
+                            <li><a href="#">ITEM 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Academic <i class="fas fa-caret-down"></i></a>
+                        <ul class="drop-down">
+                            <li><a href="#">ITEM 1</a></li>
+                            <li><a href="#">ITEM 2</a></li>
+                            <li><a href="#">ITEM 3</a></li>
+                            <li><a href="#">ITEM 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(".ham-menu").click( function() {
+            $(this).toggleClass("close");
+            
+            var navCheck = $(".nav-wrapper").css("display");
+
+            if(navCheck === "none"){
+                $(".nav-wrapper").css("display", "block");
+            }
+            else{
+                $(".nav-wrapper").css("display", "none");
+            }
+            
+        });
+
+        
+
+    </script>
+</body>
+</html>

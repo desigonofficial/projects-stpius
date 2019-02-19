@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat')
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+
+*
+    font-family: 'roboto', sans-serif
+    outline: none
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+.container
+    width: 100%
+    height: 75px
+    user-select: none
+
+    background-color: #e9e9e9
+
+    // box-shadow: 0 2px 5px rgba(0,0,0,0.25)
+
+    &:before
+        content: ''
+        width: 100%
+        height: 3px
+        background-color: #ff2400
+        position: absolute
+        top: 0
+
+    nav
+        .nav-logo
+            float: left
+            display: flex
+            margin-left: 50px
+            margin-top: 7px
+
+            img
+                width: 65px
+                height: 65px
+
+            .nav-name-logo
+                margin-left: -15px
+                margin-top: 3px
+
+                div
+                    width: 400px
+                    text-align: center
+                
+                div:nth-child(1)
+                    font-size: 1.6rem
+                    font-weight: bold
+
+                div:nth-child(2)
+                    font-size: 0.8rem
+
+                div:nth-child(3)
+                    font-size: 0.68rem
+
+        .ham-menu
+            display: none
+            width: 20px
+            height: 20px
+            position: relative
+            cursor: pointer
+            float: right
+            margin-right: 50px
+            margin-top: 28px
+
+            .line 
+                position: absolute
+                height: 2px
+                width: 100%
+                background: #757575
+                border-radius: 2px
+                transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s
+
+            .top
+                top: 18%
+
+            .middle 
+                top: 48%
+
+            .bottom 
+                top: 78%
+
+        .close
+            .top 
+                transform: rotate(45deg)
+                top: 48% 
+
+            .middle, .bottom 
+                transform: rotate(-45deg)
+                top: 48%
+        .nav-wrapper
+            float: right
+            // height: 75px
+
+            ul
+                li
+                    display: inline-block
+                    margin-top: 4px
+                    float: left
+                    position: relative
+
+                    &:nth-child(5):after, &:nth-child(6):after, &:first-child:after
+                        content: ''
+                        position: absolute
+                        left: 0
+                        bottom: 0
+                        width: 0
+                        height: 2px
+                        background-color: #ff7043
+                        transition: 0.12s width ease-in-out
+
+                    &:hover a
+                        color: #ff7043
+
+                    &:nth-child(5):hover:after, &:nth-child(6):hover:after, &:nth-child(1):hover:after
+                        width: 100%
+                        transition: 0.12s width ease-in-out
+
+                    &:hover .drop-down
+                        display: block
+
+                    &:last-child
+                        margin-right: 50px
+
+                    .drop-down
+                        display: none
+                        position: absolute
+                        width: 150px
+                        z-index: 99
+                        background-color: #e9e9e9
+                        left: -15px
+                        box-shadow: 0 2px 3px rgba(0,0,0,0.25)
+
+                        li
+                            display: block
+                            width: 100%
+                            margin-left: 0px
+
+                            &:after
+                                content: ''
+                                display: none
+
+                            a
+                                display: block
+                                padding: 12px 0
+                                width: 100%
+                                margin: 0
+                                font-weight: normal
+                                color: #757575
+                                padding-left: 15px
+
+                                &:hover
+                                    color: #757575
+                                    background-color: #d6d6d6
+
+                    &:not(:first-child)
+                        margin-left: 25px
+
+                    a
+                        display: inline-block
+                        color: #757575
+                        text-transform: uppercase
+                        text-decoration: none
+                        font-weight: bold
+                        font-size: 14px
+                        letter-spacing: 1.1px
+                        padding: 27px 0
+                        cursor: pointer
+                        transition: 0.12s all ease-in-out
+
+                    .active
+                        color: #ff7043
+                        position: relative
+
+                        &:before
+                            content: ''
+                            position: absolute
+                            left: 0
+                            bottom: 0
+                            width: 100%
+                            height: 2px
+                            background-color: #ff7043
+
+
+@media only screen and (max-width: 1160px)
+    
+    .container
+        nav
+            .ham-menu
+                display: block
+
+            .nav-wrapper
+                display: none
+                width: 100%
+                background-color: white
+
+                ul
+                    li
+                        margin-top: 0px
+                        a
+                            width: 100%
+                            text-align: center
+                            border-bottom: 1px solid rgba(0,0,0,0.2)
+                            padding: 20px
+
+
+                        &:not(:first-child)
+                            margin-left: 0px
+
+                        &:nth-child(5):hover:after, &:nth-child(6):hover:after, &:nth-child(1):hover:after
+                            display: none
+                        
+                        &:hover a
+                            color: #000
+
+                        display: block
+                        width: 100%
+                        // text-align: center
+
+                        .drop-down
+                            position: static
+                            width: 100%
+                            box-shadow: none
+
+                            li
+                                width: 100%
+                                background-color: rgba(0,0,0,0.08)
+                                margin-top: 0px
+                                
+
+                                a
+                                    width: 100%
+                                    padding-left: 0
+                                    // text-align: center
+
+                        .active
+
+                            &:before
+                                content: ''
+                                display: none
+
+@media only screen and (max-width: 580px)
+
+    .container
+        height: 130px
+        nav
+            .nav-logo
+
+                img
+                    width: 65px
+                    height: 65px
+                    position: absolute
+                    left: 50%
+                    transform: translateX(-50%)
+
+                .nav-name-logo
+                    display: block
+                    width: 100%
+                    position: absolute
+                    top: 73px
+                    left: 50%
+                    transform: translateX(-50%)
+                    margin: 0
+                    margin-top: 3px
+
+                    div
+                        width: 100%
+                        text-align: center
+                    
+                    div:nth-child(1)
+                        font-size: 1.34rem
+                        font-weight: bold
+
+                    div:nth-child(2)
+                        font-size: 0.65rem
+
+                    div:nth-child(3)
+                        font-size: 0.5rem
+
+            .ham-menu
+                margin-right: 30px
+                position: relative
+
+            .nav-wrapper
+                margin-top: 85px
+                background-color: white

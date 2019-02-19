@@ -1,0 +1,60 @@
+.hero-slider {
+  width: 100%;
+}
+
+.hero-slider img {
+  width: 100%;
+}
+
+.hero-slider .slick-slide {
+  width: 100%;
+  background-size: 100%;
+}
+
+.hero-slider .slick-prev {
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  height: 100%;
+  width: 100px;
+}
+
+.hero-slider .slick-prev:before {
+  content: '';
+}
+
+.hero-slider .slick-prev:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+
+.hero-slider .slick-next {
+  right: 0;
+  width: 100px;
+  height: 100%;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.hero-slider .slick-next:before {
+  content: '';
+}
+
+.hero-slider .slick-next:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+}
+
+@media only screen and (max-width: 1160px) {
+  .hero-slider .slick-next, .hero-slider .slick-prev {
+    width: 30px;
+  }
+  .hero-slider .slick-next:hover, .hero-slider .slick-prev:hover {
+    background-image: none;
+  }
+  .hero-slider .slick-slide {
+    background-size: 150%;
+    background-position: center;
+  }
+}
+/*# sourceMappingURL=hero-slider.css.map */
